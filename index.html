@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bóveda</title>
+<meta name="description" content="Bóveda: aplicación de escritorio para Windows que guarda información sensible cifrada en tu propio equipo.">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header><img src="icon.png" alt=""><h1>Bóveda</h1></header>
+  <p class="lead">Aplicación de escritorio para Windows, de uso personal, que guarda contraseñas, notas, tarjetas,
+  documentos y archivos cifrados en tu propio equipo.</p>
+
+  <div class="card">
+    <h2>Qué hace</h2>
+    <ul>
+      <li>Cifra todo localmente con AES-256-GCM y una clave derivada de tu contraseña maestra (Argon2id).</li>
+      <li>No tiene servidores ni cuentas propias: los datos no se envían a ningún sitio controlado por el desarrollador.</li>
+      <li>Opcionalmente se conecta a <strong>tu</strong> cuenta de Google para:
+        <ul>
+          <li>recuperar la bóveda si olvidas la contraseña maestra, y</li>
+          <li>guardar copias de seguridad <strong>ya cifradas</strong> en una carpeta privada de la app en tu Google Drive.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Uso de datos de Google</h2>
+    <p>Bóveda solo solicita tu dirección de correo y el permiso <code>drive.appdata</code>, que da acceso únicamente
+    a una carpeta oculta reservada para la app. No puede ver, leer ni modificar el resto de tu Google Drive.
+    Detalles en la <a href="privacidad.html">política de privacidad</a>.</p>
+  </div>
+
+  <footer>
+    <a href="privacidad.html">Política de privacidad</a> ·
+    Contacto: <a href="https://github.com/engarciapena-ui">github.com/engarciapena-ui</a>
+  </footer>
+</main>
+</body>
+</html>

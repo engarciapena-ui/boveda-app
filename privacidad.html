@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidad de Bóveda</title>
+<meta name="description" content="Política de privacidad de la aplicación de escritorio Bóveda.">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header><img src="icon.png" alt=""><h1>Política de privacidad</h1></header>
+  <p class="lead">Bóveda · última actualización: 23 de octubre de 2026</p>
+
+  <div class="card">
+    <h2>1. Qué es Bóveda</h2>
+    <p>Bóveda es una aplicación de escritorio para Windows, de uso personal, que guarda información sensible
+    cifrada en el equipo del usuario. No dispone de servidores propios y no recoge datos para el desarrollador.</p>
+
+    <h2>2. Datos que se guardan y dónde</h2>
+    <ul>
+      <li>El contenido de la bóveda (entradas, notas, adjuntos) se guarda <strong>solo en tu equipo</strong>,
+      cifrado con AES-256-GCM. La clave se deriva de tu contraseña maestra, que nunca se guarda ni se envía.</li>
+      <li>Las preferencias de la app (tiempo de bloqueo, ubicación del archivo) se guardan en tu equipo.</li>
+    </ul>
+
+    <h2>3. Datos de Google</h2>
+    <p>Solo si conectas tu cuenta de Google, Bóveda solicita estos permisos:</p>
+    <ul>
+      <li><code>openid</code> y <code>email</code>: para saber con qué cuenta se activó la recuperación y comprobar
+      que es la misma al recuperar.</li>
+      <li><code>https://www.googleapis.com/auth/drive.appdata</code>: acceso únicamente a la carpeta privada de la app
+      en tu Google Drive, que no es visible en drive.google.com. Ahí se guardan:
+        <ul>
+          <li>copias de seguridad del archivo de la bóveda, <strong>ya cifradas</strong> en tu equipo antes de subirse, y</li>
+          <li>un secreto aleatorio de recuperación, que por sí solo no permite leer la bóveda.</li>
+        </ul>
+      </li>
+    </ul>
+    <p>Bóveda <strong>no</strong> accede al resto de tu Drive, a tu correo ni a otros servicios de Google.
+    Los datos obtenidos de Google se usan exclusivamente para estas funciones, no se transfieren a terceros,
+    no se usan con fines publicitarios y no se envían al desarrollador. El token de acceso de Google se guarda
+    dentro de la bóveda cifrada, en tu equipo.</p>
+    <p>El uso que hace Bóveda de la información recibida de las API de Google cumple la
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Datos de Usuario de los Servicios de API de Google</a>,
+    incluidos los requisitos de uso limitado.</p>
+
+    <h2>4. Otros servicios</h2>
+    <p>Si usas la función opcional «Comprobar filtraciones», se consulta el servicio Have I Been Pwned enviando
+    solo los 5 primeros caracteres del hash SHA-1 de cada contraseña (k-anonimato). Las contraseñas nunca salen
+    del equipo.</p>
+
+    <h2>5. Cómo eliminar tus datos</h2>
+    <ul>
+      <li>En Bóveda: <em>Ajustes › Cuenta de Google › Desconectar</em>, que borra el secreto de recuperación y,
+      si lo eliges, las copias de Drive, y revoca el permiso.</li>
+      <li>En Google: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> › Boveda › Quitar acceso.
+      Los datos de la carpeta de la app se pueden borrar en Google Drive › Configuración › Administrar aplicaciones.</li>
+      <li>Los datos locales se eliminan borrando el archivo de la bóveda.</li>
+    </ul>
+
+    <h2>6. Contacto</h2>
+    <p><a href="https://github.com/engarciapena-ui">github.com/engarciapena-ui</a></p>
+  </div>
+
+  <footer><a href="index.html">← Bóveda</a></footer>
+</main>
+</body>
+</html>
